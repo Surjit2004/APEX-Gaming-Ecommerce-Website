@@ -1,0 +1,2785 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!--fontawesome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script src="https://kit.fontawesome.com/b686c103e7.js" crossorigin="anonymous"></script>
+
+    <script src="JS/path_to_your_script.js"></script>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Unicons CSS -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+
+    <!--Linking for website icon-->
+    <link rel="shortcut icon" type="x-icon" href="img/icon.png">
+
+    <!--====== external css style.css file link======-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --item1-transform: translateX(-100%) translateY(-5%) scale(1.5);
+            --item1-filter: blur(30px);
+            --item1-zIndex: 11;
+            --item1-opacity: 0;
+
+            --item2-transform: translateX(0);
+            --item2-filter: blur(0px);
+            --item2-zIndex: 10;
+            --item2-opacity: 1;
+
+            --item3-transform: translate(50%, 10%) scale(0.8);
+            --item3-filter: blur(10px);
+            --item3-zIndex: 9;
+            --item3-opacity: 1;
+
+            --item4-transform: translate(90%, 20%) scale(0.5);
+            --item4-filter: blur(30px);
+            --item4-zIndex: 8;
+            --item4-opacity: 1;
+
+            --item5-transform: translate(120%, 30%) scale(0.3);
+            --item5-filter: blur(40px);
+            --item5-zIndex: 7;
+            --item5-opacity: 0;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        /*Header CSS start*/
+
+        .t-header {
+            background-color: #FFCA75;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: left;
+        }
+
+        /*Header CSS end*/
+
+        /*topmost marquee CSS start*/
+        .tour {
+            height: 50px;
+        }
+
+        .tour span {
+            color: #CC6633;
+            line-height: 50px;
+            font-size: 20px;
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        /*topmost marquee CSS end*/
+
+        /*div tag icon CSS start*/
+
+        .icon {
+            display: flex;
+            height: 50px;
+            justify-content: right;
+        }
+
+        .icon ul {
+            text-align: center;
+        }
+
+        .icon ul li {
+            display: inline-block;
+        }
+
+        .icon ul li a {
+            color: black;
+            line-height: 50px;
+            margin-left: 5px;
+            margin-right: 10px;
+        }
+
+        .icon ul li p {
+            color: white;
+        }
+
+        /*div tag icon CSS end*/
+
+        /*Facebook, Whatsapp, Twitter, Login/Signup button CSS start*/
+
+        .fa-facebook {
+            color: white;
+            background-color: blue;
+            padding: 3px 5px;
+            border-radius: 3px;
+        }
+
+        .fa-whatsapp {
+            color: white;
+            background-color: green;
+            padding: 3px 5px;
+            border-radius: 3px;
+        }
+
+        .fa-twitter {
+            color: white;
+            background-color: skyblue;
+            padding: 3px 5px;
+            border-radius: 3px;
+        }
+
+        .fa-brightness {
+            padding: 3px 5px;
+            border-radius: 3px;
+        }
+
+        /*Facebook, Whatsapp, Twitter, Login/Signup button CSS end*/
+
+        /*Searchbar CSS start*/
+        form {
+            background: white;
+            display: flex;
+        }
+
+        form input {
+            flex: 1;
+            border: none;
+            outline: none;
+        }
+
+        form button {
+            background: tomato;
+            padding: 10px 50px;
+            border: none;
+            outline: none;
+            color: white;
+            letter-spacing: 1px;
+            cursor: pointer;
+        }
+
+        form .fa-search {
+            align-self: center;
+            padding: 10px 20px;
+            color: #777;
+        }
+
+        /*Searchbar CSS end*/
+
+        /*Navigation Bar CSS start*/
+
+        .navigation {
+            position: sticky;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            background: black;
+            /*rgba(255, 255, 255, .1)*/
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .logo {
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            text-shadow: 0 0 20px #00fffb, 0 0 40px #0081bc;
+        }
+
+        .nav__links {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            /* Aligning items vertically */
+            align-content: center;
+            height: 40px;
+            padding-left: 250px;
+
+        }
+
+        .nav-link {
+            position: relative;
+            padding: 0.5rem 1rem;
+            color: #a0a0a0;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            transition: 0.5s;
+        }
+
+        .nav__links li,
+        a {
+            font-size: 1.15em;
+            padding: 6px 10px;
+            text-decoration: none;
+            font-weight: 200;
+            margin-right: 20px;
+            transition: 0.5s;
+            z-index: 2000;
+        }
+
+        .nav__links li a:hover {
+            /*color: #0ef;*/
+            color: tomato;
+        }
+
+        .nav__links li a span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            border-bottom: 2px solid tomato;
+            /*#0ef*/
+            border-radius: 15px;
+            transform: scale(0) translateY(50px);
+            transition: .5s;
+            opacity: 0;
+        }
+
+        .nav__links li a:hover span {
+            transform: scale(1) translateY(0);
+            opacity: 1;
+        }
+
+        .nav-item.active .nav-link {
+            background: #FFCA75;
+            color: black;
+            border-radius: 15px;
+            display: inline-block;
+            padding: 5px;
+        }
+
+        .dropdown-menu {
+            z-index: 1;
+        }
+
+        .cart-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+        }
+
+        .cart-icon a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+            transition: 0.3s;
+            color: white;
+        }
+
+        .cart-icon p {
+            font-size: 15px;
+            margin-right: 10px;
+            margin-top: 25px;
+        }
+
+        .cart-icon a:hover {
+            color: tomato;
+            transform: scale(1.5) ease-in;
+        }
+
+        /*Navigation bar CSS end*/
+
+        /*Dark-mode button CSS start*/
+        /* Default */
+
+        /* .theme {
+            display: flex;
+            align-items: center;
+            -webkit-tap-highlight-color: transparent;
+            cursor: pointer;
+            height: 20px;
+        }
+
+        .theme__fill,
+        .theme__icon {
+            transition: 0.3s;
+        }
+
+        .theme__fill {
+            background-color: var(--bg);
+            display: block;
+            mix-blend-mode: difference;
+            position: fixed;
+            inset: 0;
+            height: 100%;
+            transform: translateX(-100%);
+        }
+
+        .theme__icon,
+        .theme__toggle {
+            z-index: 1;
+        }
+
+        .theme__icon,
+        .theme__icon-part {
+            position: absolute;
+        }
+
+        .theme__icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            top: 1em;
+            left: 0.7em;
+            width: 1.5em;
+            height: 1em;
+        }
+
+        .theme__icon-part {
+            border-radius: 50%;
+            box-shadow: 0.4em -0.4em 0 0.5em hsl(0, 0%, 100%) inset;
+            top: calc(50% - 0.5em);
+            left: calc(50% - 0.5em);
+            width: 1em;
+            height: 1em;
+            transition: box-shadow var(--transDur) ease-in-out,
+                opacity var(--transDur) ease-in-out,
+                transform var(--transDur) ease-in-out;
+            transform: scale(0.5);
+        }
+
+        .theme__icon-part~.theme__icon-part {
+            background-color: hsl(0, 0%, 100%);
+            border-radius: 0.05em;
+            top: 50%;
+            left: calc(50% - 0.05em);
+            transform: rotate(0deg) translateY(0.5em);
+            transform-origin: 50% 0;
+            width: 0.1em;
+            height: 0.2em;
+        }
+
+        .theme__icon-part:nth-child(3) {
+            transform: rotate(45deg) translateY(0.45em);
+        }
+
+        .theme__icon-part:nth-child(4) {
+            transform: rotate(90deg) translateY(0.45em);
+        }
+
+        .theme__icon-part:nth-child(5) {
+            transform: rotate(135deg) translateY(0.45em);
+        }
+
+        .theme__icon-part:nth-child(6) {
+            transform: rotate(180deg) translateY(0.45em);
+        }
+
+        .theme__icon-part:nth-child(7) {
+            transform: rotate(225deg) translateY(0.45em);
+        }
+
+        .theme__icon-part:nth-child(8) {
+            transform: rotate(270deg) translateY(0.5em);
+        }
+
+        .theme__icon-part:nth-child(9) {
+            transform: rotate(315deg) translateY(0.5em);
+        }
+
+        .theme__label,
+        .theme__toggle,
+        .theme__toggle-wrap {
+            position: relative;
+        }
+
+        .theme__toggle,
+        .theme__toggle:before {
+            display: block;
+        }
+
+        .theme__toggle {
+            background-color: hsl(48, 90%, 85%);
+            border-radius: 25% / 50%;
+            box-shadow: 0 0 0 0.125em var(--primaryT);
+            padding: 0.25em;
+            width: 6em;
+            height: 3em;
+            -webkit-appearance: none;
+            appearance: none;
+            transition: background-color var(--transDur) ease-in-out,
+                box-shadow 0.15s ease-in-out,
+                transform var(--transDur) ease-in-out;
+        }
+
+        .theme__toggle:before {
+            background-color: hsl(48, 90%, 55%);
+            border-radius: 50%;
+            content: "";
+            width: 2.5em;
+            height: 2.5em;
+            transition: 0.3s;
+        }
+
+        .theme__toggle:focus {
+            box-shadow: 0 0 0 0.125em var(--primary);
+            outline: transparent;
+        }
+
+        
+        .theme__toggle:checked {
+            background-color: hsl(198, 90%, 15%);
+        }
+
+        .theme__toggle:checked:before,
+        .theme__toggle:checked~.theme__icon {
+            transform: translateX(3em);
+        }
+
+        .theme__toggle:checked:before {
+            background-color: hsl(198, 90%, 55%);
+        }
+
+        .theme__toggle:checked~.theme__fill {
+            transform: translateX(0);
+        }
+
+        .theme__toggle:checked~.theme__icon .theme__icon-part:nth-child(1) {
+            box-shadow: 0.2em -0.2em 0 0.2em hsl(0, 0%, 100%) inset;
+            transform: scale(1);
+
+        }
+
+        .theme__toggle:checked~.theme__icon .theme__icon-part~.theme__icon-part {
+            opacity: 0;
+        }
+
+        .theme__toggle:checked~.theme__icon .theme__icon-part:nth-child(2) {
+            transform: rotate(45deg) translateY(0.8em);
+        }
+
+        .theme__toggle:checked~.theme__icon .theme__icon-part:nth-child(3) {
+            transform: rotate(90deg) translateY(0.8em);
+        }
+
+        .theme__toggle:checked~.theme__icon .theme__icon-part:nth-child(4) {
+            transform: rotate(135deg) translateY(0.8em);
+        }
+
+        .theme__toggle:checked~.theme__icon .theme__icon-part:nth-child(5) {
+            transform: rotate(180deg) translateY(0.8em);
+        }
+
+        .theme__toggle:checked~.theme__icon .theme__icon-part:nth-child(6) {
+            transform: rotate(225deg) translateY(0.8em);
+        }
+
+        .theme__toggle:checked~.theme__icon .theme__icon-part:nth-child(7) {
+            transform: rotate(270deg) translateY(0.8em);
+        }
+
+        .theme__toggle:checked~.theme__icon .theme__icon-part:nth-child(8) {
+            transform: rotate(315deg) translateY(0.8em);
+        }
+
+        .theme__toggle:checked~.theme__icon .theme__icon-part:nth-child(9) {
+            transform: rotate(360deg) translateY(0.8em);
+        }
+
+        .theme__toggle-wrap {
+            margin: 0 0.75em;
+        }
+
+        .dark-mode {
+            background-color: #1f1f1f;
+            color: #ffffff;
+        }
+
+        @supports selector(:focus-visible) {
+            .theme__toggle:focus {
+                box-shadow: 0 0 0 0.125em var(--primaryT);
+            }
+
+            .theme__toggle:focus-visible {
+                box-shadow: 0 0 0 0.125em var(--primary);
+            }
+        } */
+
+        /* .cta button {
+            background-color: #333;
+            color: #0ef;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: flex;
+            align-items: center;
+        }
+
+        .cta button:hover {
+            background-color: #555;
+        } */
+
+        /*Dark-mode button CSS end*/
+
+        /* carousel */
+        .carousel {
+            position: relative;
+            height: 800px;
+            overflow: hidden;
+            margin-top: -50px;
+        }
+
+        .carousel .list {
+            position: absolute;
+            width: 1140px;
+            max-width: 90%;
+            height: 80%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .carousel .list .item {
+            position: absolute;
+            left: 0%;
+            width: 70%;
+            height: 100%;
+            font-size: 15px;
+            transition: left 0.5s, opacity 0.5s, width 0.5s;
+        }
+
+        .carousel .list .item:nth-child(n + 6) {
+            opacity: 0;
+        }
+
+        .carousel .list .item:nth-child(2) {
+            z-index: 10;
+            transform: translateX(0);
+        }
+
+        .carousel .list .item img {
+            width: 50%;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: right 1.5s;
+        }
+
+        .carousel .list .item .introduce {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .carousel .list .item:nth-child(2) .introduce {
+            opacity: 1;
+            pointer-events: auto;
+            width: 400px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: opacity 0.5s;
+        }
+
+        .carousel .list .item .introduce .title {
+            font-size: 2em;
+            font-weight: 500;
+            line-height: 1em;
+        }
+
+        .carousel .list .item .introduce .topic {
+            font-size: 4em;
+            font-weight: 500;
+        }
+
+        .carousel .list .item .introduce .des {
+            font-size: small;
+            color: #5559;
+        }
+
+        .carousel .list .item .introduce .seeMore {
+            font-family: Poppins;
+            margin-top: 1.2em;
+            padding: 5px 0;
+            border: none;
+            border-bottom: 1px solid #555;
+            background-color: transparent;
+            font-weight: bold;
+            letter-spacing: 3px;
+            transition: background 0.5s;
+        }
+
+        .carousel .list .item .introduce .seeMore:hover {
+            background: #eee;
+        }
+
+        .carousel .list .item:nth-child(1) {
+            transform: var(--item1-transform);
+            filter: var(--item1-filter);
+            z-index: var(--item1-zIndex);
+            opacity: var(--item1-opacity);
+            pointer-events: none;
+        }
+
+        .carousel .list .item:nth-child(3) {
+            transform: var(--item3-transform);
+            filter: var(--item3-filter);
+            z-index: var(--item3-zIndex);
+        }
+
+        .carousel .list .item:nth-child(4) {
+            transform: var(--item4-transform);
+            filter: var(--item4-filter);
+            z-index: var(--item4-zIndex);
+        }
+
+        .carousel .list .item:nth-child(5) {
+            transform: var(--item5-transform);
+            filter: var(--item5-filter);
+            opacity: var(--item5-opacity);
+            pointer-events: none;
+        }
+
+        /* animation text in item2 */
+        .carousel .list .item:nth-child(2) .introduce .title,
+        .carousel .list .item:nth-child(2) .introduce .topic,
+        .carousel .list .item:nth-child(2) .introduce .des,
+        .carousel .list .item:nth-child(2) .introduce .seeMore {
+            opacity: 0;
+            animation: showContent 0.5s 1s ease-in-out 1 forwards;
+        }
+
+        @keyframes showContent {
+            from {
+                transform: translateY(-30px);
+                filter: blur(10px);
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+                filter: blur(0px);
+            }
+        }
+
+        .carousel .list .item:nth-child(2) .introduce .topic {
+            animation-delay: 1.2s;
+        }
+
+        .carousel .list .item:nth-child(2) .introduce .des {
+            animation-delay: 1.4s;
+        }
+
+        .carousel .list .item:nth-child(2) .introduce .seeMore {
+            animation-delay: 1.6s;
+        }
+
+        /* next click */
+        .carousel.next .item:nth-child(1) {
+            animation: transformFromPosition2 0.5s ease-in-out 1 forwards;
+        }
+
+        @keyframes transformFromPosition2 {
+            from {
+                transform: var(--item2-transform);
+                filter: var(--item2-filter);
+                opacity: var(--item2-opacity);
+            }
+        }
+
+        .carousel.next .item:nth-child(2) {
+            animation: transformFromPosition3 0.7s ease-in-out 1 forwards;
+        }
+
+        @keyframes transformFromPosition3 {
+            from {
+                transform: var(--item3-transform);
+                filter: var(--item3-filter);
+                opacity: var(--item3-opacity);
+            }
+        }
+
+        .carousel.next .item:nth-child(3) {
+            animation: transformFromPosition4 0.9s ease-in-out 1 forwards;
+        }
+
+        @keyframes transformFromPosition4 {
+            from {
+                transform: var(--item4-transform);
+                filter: var(--item4-filter);
+                opacity: var(--item4-opacity);
+            }
+        }
+
+        .carousel.next .item:nth-child(4) {
+            animation: transformFromPosition5 1.1s ease-in-out 1 forwards;
+        }
+
+        @keyframes transformFromPosition5 {
+            from {
+                transform: var(--item5-transform);
+                filter: var(--item5-filter);
+                opacity: var(--item5-opacity);
+            }
+        }
+
+        /* previous */
+        .carousel.prev .list .item:nth-child(5) {
+            animation: transformFromPosition4 0.5s ease-in-out 1 forwards;
+        }
+
+        .carousel.prev .list .item:nth-child(4) {
+            animation: transformFromPosition3 0.7s ease-in-out 1 forwards;
+        }
+
+        .carousel.prev .list .item:nth-child(3) {
+            animation: transformFromPosition2 0.9s ease-in-out 1 forwards;
+        }
+
+        .carousel.prev .list .item:nth-child(2) {
+            animation: transformFromPosition1 1.1s ease-in-out 1 forwards;
+        }
+
+        @keyframes transformFromPosition1 {
+            from {
+                transform: var(--item1-transform);
+                filter: var(--item1-filter);
+                opacity: var(--item1-opacity);
+            }
+        }
+
+        /* detail  */
+        .carousel .list .item .detail {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        /* showDetail */
+        .carousel.showDetail .list .item:nth-child(3),
+        .carousel.showDetail .list .item:nth-child(4) {
+            left: 100%;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .carousel.showDetail .list .item:nth-child(2) {
+            width: 100%;
+        }
+
+        .carousel.showDetail .list .item:nth-child(2) .introduce {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .carousel.showDetail .list .item:nth-child(2) img {
+            right: 50%;
+        }
+
+        .carousel.showDetail .list .item:nth-child(2) .detail {
+            opacity: 1;
+            width: 50%;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: right;
+            pointer-events: auto;
+        }
+
+        .carousel.showDetail .list .item:nth-child(2) .detail .title {
+            font-size: 4em;
+        }
+
+        .carousel.showDetail .list .item:nth-child(2) .detail .specifications {
+            display: flex;
+            gap: 10px;
+            width: 100%;
+            border-top: 1px solid #5553;
+            margin-top: 20px;
+        }
+
+        .carousel.showDetail .list .item:nth-child(2) .detail .specifications div {
+            width: 90px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        .carousel.showDetail .list .item:nth-child(2) .detail .specifications div p:nth-child(1) {
+            font-weight: bold;
+        }
+
+        .carousel.carousel.showDetail .list .item:nth-child(2) .checkout button {
+            font-family: Poppins;
+            background-color: transparent;
+            border: 1px solid #5555;
+            margin-left: 5px;
+            padding: 5px 10px;
+            letter-spacing: 2px;
+            font-weight: 500;
+        }
+
+        .carousel.carousel.showDetail .list .item:nth-child(2) .checkout button:nth-child(2) {
+            background-color: #693EFF;
+            color: #eee;
+        }
+
+        .carousel.showDetail .list .item:nth-child(2) .detail .title,
+        .carousel.showDetail .list .item:nth-child(2) .detail .des,
+        .carousel.showDetail .list .item:nth-child(2) .detail .specifications,
+        .carousel.showDetail .list .item:nth-child(2) .detail .checkout {
+            opacity: 0;
+            animation: showContent 0.5s 1s ease-in-out 1 forwards;
+        }
+
+        .carousel.showDetail .list .item:nth-child(2) .detail .des {
+            animation-delay: 1.2s;
+        }
+
+        .carousel.showDetail .list .item:nth-child(2) .detail .specifications {
+            animation-delay: 1.4s;
+        }
+
+        .carousel.showDetail .list .item:nth-child(2) .detail .checkout {
+            animation-delay: 1.6s;
+        }
+
+        .arrows {
+            position: absolute;
+            bottom: 10px;
+            width: 1140px;
+            max-width: 90%;
+            display: flex;
+            justify-content: space-between;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        #prev,
+        #next {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-family: monospace;
+            border: 1px solid #5555;
+            font-size: large;
+            bottom: 20%;
+            left: 10%;
+        }
+
+        #next {
+            left: unset;
+            right: 10%;
+        }
+
+        #back {
+            position: absolute;
+            z-index: 100;
+            bottom: 0%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: none;
+            border-bottom: 1px solid #555;
+            font-family: Poppins;
+            font-weight: bold;
+            letter-spacing: 3px;
+            background-color: transparent;
+            padding: 10px;
+            /* opacity: 0; */
+            transition: opacity 0.5s;
+        }
+
+        .carousel.showDetail #back {
+            opacity: 1;
+        }
+
+        .carousel.showDetail #prev,
+        .carousel.showDetail #next {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .carousel::before {
+            width: 500px;
+            height: 300px;
+            content: '';
+            background-image: linear-gradient(70deg, #DC422A, blue);
+            position: absolute;
+            z-index: -1;
+            border-radius: 20% 30% 80% 10%;
+            filter: blur(150px);
+            top: 50%;
+            left: 50%;
+            transform: translate(-10%, -50%);
+            transition: 1s;
+        }
+
+        .carousel.showDetail::before {
+            transform: translate(-100%, -50%) rotate(90deg);
+            filter: blur(130px);
+        }
+
+        @media screen and (max-width: 991px) {
+
+            /* ipad, tablets */
+            .carousel .list .item {
+                width: 90%;
+            }
+
+            .carousel.showDetail .list .item:nth-child(2) .detail .specifications {
+                overflow: auto;
+            }
+
+            .carousel.showDetail .list .item:nth-child(2) .detail .title {
+                font-size: 2em;
+            }
+        }
+
+        @media screen and (max-width: 767px) {
+
+            /* mobile */
+            .carousel {
+                height: 600px;
+            }
+
+            .carousel .list .item {
+                width: 100%;
+                font-size: 10px;
+            }
+
+            .carousel .list {
+                height: 100%;
+            }
+
+            .carousel .list .item:nth-child(2) .introduce {
+                width: 50%;
+            }
+
+            .carousel .list .item img {
+                width: 40%;
+            }
+
+            .carousel.showDetail .list .item:nth-child(2) .detail {
+                backdrop-filter: blur(10px);
+                font-size: small;
+            }
+
+            .carousel .list .item:nth-child(2) .introduce .des,
+            .carousel.showDetail .list .item:nth-child(2) .detail .des {
+                height: 100px;
+                overflow: auto;
+            }
+
+            .carousel.showDetail .list .item:nth-child(2) .detail .checkout {
+                display: flex;
+                width: max-content;
+                float: right;
+            }
+        }
+
+
+
+        .container .group {
+            display: flex;
+            width: 85%;
+            line-height: 28px;
+            align-items: center;
+            position: relative;
+        }
+
+        .container .input {
+            width: 100%;
+            height: 40px;
+            line-height: 28px;
+            padding: 0 1rem;
+            padding-left: 2.5rem;
+            border: 2px solid transparent;
+            border-radius: 8px;
+            outline: none;
+            background-color: #f3f3f4;
+            color: #9e9ea7;
+            transition: .3s ease;
+        }
+
+        .container .input::placeholder {
+            color: #9e9ea7;
+        }
+
+        .container .input:focus,
+        .container .input:hover {
+            outline: none;
+            border-color: rgba(234, 76, 137, 0.4);
+            background-color: #f3f3f4;
+            box-shadow: 0 0 0 4px rgb(234 76 137 / 10%);
+        }
+
+        .search__button {
+            border: none;
+            color: #f3f3f4;
+            background-color: #f3f3f4;
+            margin-left: 10px;
+            position: absolute;
+            /* Adjust this value as needed */
+        }
+
+        .search__button:hover {
+            cursor: pointer;
+            background-color: #f3f3f4;
+        }
+
+        .search__icon {
+            height: 1.2em;
+            width: 1.3em;
+            fill: tomato;
+            background-color: #f3f3f4;
+        }
+
+        /* search bar CSS End*/
+
+        /* custom Scroll-bar CSS start*/
+        ::-webkit-scrollbar {
+            width: 13px;
+        }
+
+        ::-webkit-scrollbar-track {
+            border-radius: 100vw;
+            background: #d1e5ff;
+            margin-block: .5em;
+            margin-inline: 1em;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            border-radius: 3px;
+            background: linear-gradient(#642bff, #FFCA75, tomato);
+            /* background: linear-gradient(#642bff, #ff22e6); */
+            border-radius: 100vw;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(tomato, #FFCA75, #ff22e6);
+        }
+
+        /* custom Scroll-bar CSS end*/
+
+        /*Nav bar brand CSS Start*/
+        @keyframes animate8345 {
+
+            0%,
+            100% {
+                filter: hue-rotate(0deg);
+            }
+
+            50% {
+                filter: hue-rotate(360deg);
+            }
+        }
+
+        .logo {
+            color: rgb(0, 0, 0);
+            background: linear-gradient(to right, #2d60ec, #3ccfda);
+            font-size: 30px;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: animate8345 9s linear infinite;
+            font-weight: bold;
+        }
+
+        @keyframes animate8345 {
+
+            0%,
+            100% {
+                filter: hue-rotate(0deg);
+            }
+
+            50% {
+                filter: hue-rotate(360deg);
+            }
+        }
+
+        .logo {
+            color: rgb(0, 0, 0);
+            background: linear-gradient(to right, #2d60ec, #3ccfda);
+            font-size: 30px;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: animate8345 9s linear infinite;
+            font-weight: bold;
+        }
+
+        /*Nav bar brand CSS End*/
+
+        /*Preloader CSS start*/
+        #preloader {
+            background: black;
+            height: 100vh;
+            width: 100%;
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+        }
+
+        #container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        #h3 {
+            color: tomato;
+        }
+
+        #ring {
+            width: 190px;
+            height: 190px;
+            border: 1px solid transparent;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        #ring:nth-child(1) {
+            border-bottom: 8px solid rgb(255, 141, 249);
+            animation: rotate1 2s linear infinite;
+        }
+
+        @keyframes rotate1 {
+            from {
+                transform: rotateX(50deg) rotateZ(110deg);
+            }
+
+            to {
+                transform: rotateX(50deg) rotateZ(470deg);
+            }
+        }
+
+        #ring:nth-child(2) {
+            border-bottom: 8px solid rgb(255, 65, 106);
+            animation: rotate2 2s linear infinite;
+        }
+
+        @keyframes rotate2 {
+            from {
+                transform: rotateX(20deg) rotateY(50deg) rotateZ(20deg);
+            }
+
+            to {
+                transform: rotateX(20deg) rotateY(50deg) rotateZ(380deg);
+            }
+        }
+
+        #ring:nth-child(3) {
+            border-bottom: 8px solid rgb(0, 255, 255);
+            animation: rotate3 2s linear infinite;
+        }
+
+        @keyframes rotate3 {
+            from {
+                transform: rotateX(40deg) rotateY(130deg) rotateZ(450deg);
+            }
+
+            to {
+                transform: rotateX(40deg) rotateY(130deg) rotateZ(90deg);
+            }
+        }
+
+        #ring:nth-child(4) {
+            border-bottom: 8px solid rgb(252, 183, 55);
+            animation: rotate4 2s linear infinite;
+        }
+
+        @keyframes rotate4 {
+            from {
+                transform: rotateX(70deg) rotateZ(270deg);
+            }
+
+            to {
+                transform: rotateX(70deg) rotateZ(630deg);
+            }
+        }
+
+        /*Preloader CSS end*/
+
+        .category {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .section-p1 {
+            padding: 40px 80px;
+        }
+
+        .section-m1 {
+            margin: 40px 0;
+        }
+
+        button.normal {
+            font-size: 14px;
+            font-weight: 600;
+            padding: 15px 30px;
+            color: #000;
+            background-color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            transition: 0.2s;
+        }
+
+        #feature {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        #feature .fe-box {
+            width: 180px;
+            text-align: center;
+            padding: 25px 15px;
+            box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.04);
+            border: 1px solid #cce7d0;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+
+        #feature .fe-box:hover {
+            box-shadow: 10px 10px 54px rgba(70, 62, 221, 0.1);
+        }
+
+        #feature .fe-box img {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        #feature .fe-box h6 {
+            text-align: center;
+            display: inline-block;
+            padding: 9px 8px 6px 8px;
+            line-height: 1;
+            border-radius: 4px;
+            background-color: #fddde4;
+        }
+
+        #feature .fe-box:nth-child(2) h6 {
+            background-color: #cdebbc;
+        }
+
+        #feature .fe-box:nth-child(3) h6 {
+            background-color: #d1e8f2;
+        }
+
+        #feature .fe-box:nth-child(4) h6 {
+            background-color: #cdd4f8;
+        }
+
+        #feature .fe-box:nth-child(5) h6 {
+            background-color: #f6dbf6;
+        }
+
+        #feature .fe-box:nth-child(6) h6 {
+            background-color: #fff2e5;
+        }
+
+        #product1 {
+            text-align: center;
+        }
+
+        #product1 .pro-container {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        #product1 .pro {
+            width: 23%;
+            min-width: 250px;
+            margin-left: 15px;
+            padding: 10px 12px;
+            border: 1px solid #cce7d0;
+            border-radius: 25px;
+            cursor: pointer;
+            box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.04);
+            margin: 15px 0;
+            transition: 0.2s ease;
+            position: relative;
+        }
+
+        #product1 .pro:hover {
+            box-shadow: 20px 20px 30px tomato;
+        }
+
+        #product1 .pro img {
+            width: 100%;
+            border-radius: 20px;
+        }
+
+        #product1 .pro .des {
+            text-align: start;
+            padding: 10px 0;
+        }
+
+        #product1 .pro .des span {
+            color: #606063;
+            font-size: 12px;
+        }
+
+        #product1 .pro .des h5 {
+            padding-top: 7px;
+            color: #1a1a1a;
+            font-size: 14px;
+        }
+
+        #product1 .pro .des i {
+            font-size: 12px;
+            color: rgb(243, 181, 25);
+        }
+
+        #product1 .pro .des h4 {
+            padding-top: 7px;
+            color: #088178;
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        #product1 .pro .cart {
+            margin-left: 110px;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 50px;
+            background-color: #e8f6ea;
+            font-weight: 500;
+            color: tomato;
+            border: 1px solid #cce7d0;
+            display: inline-block;
+            text-align: center;
+            position: absolute;
+            bottom: 20px;
+            right: 10px;
+            transition: 0.2s ease;
+        }
+
+        #product1 .pro .cart:hover {
+            background-color: #f6dbf6;
+            color: #1a1a1a;
+            cursor: pointer;
+            box-shadow: 20px 20px 30px solid #088178;
+        }
+
+        #banner {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background-image: url("banner2.jpg");
+            background-repeat: no-repeat;
+            height: 40vh;
+            background-size: cover;
+            background-position: center;
+        }
+
+        #banner h4 {
+            color: #fff;
+            font-size: 30px;
+            padding: 10px 0;
+        }
+
+        #banner h2 {
+            color: #fff;
+            font-size: 30px;
+            padding: 10px 0;
+        }
+
+        #banner h2 span {
+            color: tomato;
+        }
+
+        #banner button:hover {
+            background: #088178;
+            color: tomato;
+        }
+
+        #shop_category {
+            text-align: center;
+            color: #088178;
+        }
+
+        #shop_category::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: tomato;
+            margin: 20px 0;
+        }
+
+        #category {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        #category .sub-category,
+        #category .sub-category2,
+        #category .sub-category3,
+        #category .sub-category4,
+        #category .sub-category5,
+        #category .sub-category6 {
+            color: white;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            border-radius: 10px;
+            background-size: cover;
+            background-position: center;
+            min-width: 580px;
+            height: 50vh;
+            padding: 10px;
+            transition: 0.2s ease;
+        }
+
+        #category .sub-category:hover,
+        #category .sub-category2:hover,
+        #category .sub-category3:hover,
+        #category .sub-category4:hover,
+        #category .sub-category5:hover,
+        #category .sub-category6:hover {
+            box-shadow: 20px 20px 30px tomato;
+            transform: translateY(-10px) scale(1.05);
+        }
+
+        #category .sc-1 {
+            color: tomato;
+            font-weight: 700;
+        }
+
+        #category .sc-2 {
+            color: gold;
+            font-weight: 700;
+        }
+
+        #category .sc-3 {
+            color: rgb(255, 65, 106);
+            font-weight: 700;
+        }
+
+        #category .sc-4 {
+            color: cyan;
+            font-weight: 700;
+        }
+
+        #category .sc-5 {
+            color: orange;
+            font-weight: 700;
+        }
+
+        #category .sc-6 {
+            color: blue;
+            font-weight: 700;
+        }
+
+        #category .sub-category {
+            background-image: url("laptop2_cat.jpg");
+        }
+
+        #category .sub-category2 {
+            background-image: url("monitors_cat.jpg");
+        }
+
+        #category .sub-category3 {
+            background-image: url("keyboard.jpg");
+        }
+
+        #category .sub-category4 {
+            background-image: url("cpu_and_motherboard.jpg");
+        }
+
+        #category .sub-category5 {
+            background-image: url("headset.jpg");
+        }
+
+        #category .sub-category6 {
+            background-image: url("tws.jpg");
+        }
+
+        .button-cat {
+            margin-top: 10px;
+            font-size: 13px;
+            font-weight: 900;
+            padding: 11px 18px;
+            color: orangered;
+            background-color: transparent;
+            border-radius: 5px;
+            cursor: pointer;
+            border: 2px solid white;
+            outline: none;
+            transition: 0.2s;
+        }
+
+        .button-cat:hover {
+            background-color: tomato;
+            color: white;
+            border: 2px solid orangered;
+        }
+
+        #sm-banner {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 0 80px;
+        }
+
+        #sm-banner .sub-category7,
+        #sm-banner .sub-category8,
+        #sm-banner .sub-category9 {
+            display: flex;
+            cursor: pointer;
+            justify-content: center;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+            min-width: 30%;
+            height: 30vh;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: 0.2s ease;
+        }
+
+        #sm-banner .sub-category7:hover,
+        #sm-banner .sub-category8:hover,
+        #sm-banner .sub-category9:hover {
+            box-shadow: 20px 20px 30px cyan;
+            transform: translateY(-10px) scale(1.05);
+        }
+
+        #sm-banner .sub-category7 {
+            background-image: url("gpu_ban2.jpg");
+        }
+
+        #sm-banner .sub-category8 {
+            background-image: url("cabinet_ban.png");
+            background-color: #000;
+        }
+
+        #sm-banner .sub-category9 {
+            background-image: url("power_supply.jpg");
+        }
+
+
+        #sm-banner h2 {
+            color: white;
+            font-size: 22px;
+            font-weight: 900;
+        }
+
+        #sm-banner h3 {
+            color: rgb(243, 181, 25);
+            font-size: 15px;
+            font-weight: 800;
+        }
+
+        #newsletter {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+            background-image: url("b14.png");
+            background-position: 20% 30%;
+            background-repeat: no-repeat;
+            background-color: #041e42;
+        }
+
+        #newsletter h4 {
+            font-size: 22px;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        #newsletter p {
+            font-size: 14px;
+            font-weight: 600;
+            color: #818ea0;
+        }
+
+        #newsletter p span {
+            color: #ffbd27;
+        }
+
+        #newsletter .form {
+            display: flex;
+            width: 40%;
+        }
+
+        #newsletter input {
+            height: 3.125rem;
+            padding: 0 1.25rem;
+            font-size: 14px;
+            width: 100%;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            outline: none;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        #newsletter button {
+            background-color: #088178;
+            color: #fff;
+            white-space: nowrap;
+            transition: 0.2s ease;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+
+        #newsletter button:hover {
+            background-color: tomato;
+            color: #076a60;
+        }
+
+
+        /* Footer CSS start */
+        footer {
+            display: flex;
+            background-color: #2d2e33;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        footer .col {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        footer .logofooter {
+            margin-bottom: 30px;
+        }
+
+        footer h4 {
+            font-size: 20px;
+            font-style: bold;
+            position: relative;
+            font-size: 14px;
+            padding-bottom: 20px;
+            color: #f1bc0d;
+        }
+
+        footer h4::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 10px;
+            background-color: #27c0ac;
+            height: 2px;
+            width: 40px;
+        }
+
+        footer p {
+            font-size: 13px;
+            margin: 0 0 8px 0;
+            color: #cdebbc;
+        }
+
+        footer a {
+            font-size: 16px;
+            text-decoration: none;
+            color: #222;
+            margin-bottom: 10px;
+            color: white;
+            transition: 0.2s ease;
+        }
+
+        footer a:hover {
+            color: orangered;
+            transform: translateY(-10px) scale(1.05);
+        }
+
+        footer .follow{
+            margin-top: 20px;
+        }
+
+        footer .follow i{
+            color: tomato;
+            padding-right: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: 0.2s ease;
+            display: inline-block;
+        }
+
+        footer .follow i:hover{
+
+            color: white;
+            transform: translateY(-10px) scale(1.05);
+            background-color: tomato;
+
+        }
+
+        footer .install .row img{
+            border: 1px solid #088178;
+            border-radius: 6px;
+            object-fit: cover;
+        }
+
+        footer .install img{
+            margin: 10px 0 15px 0;
+        }
+
+
+        .copyright {
+            text-align: center;
+            background-color: #FFCA75;
+            color: black;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .copyright a{
+            color: orangered;
+            font-style: bold;
+            font-weight: 900;
+            font-size: x-large;
+        }
+
+        .footer {
+            background: #f1bc0d;
+            display: inline-block;
+            align-content: center;
+            padding-left: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        /* Footer CSS end */
+
+        @media screen (max-width:799px){
+            
+        }
+
+        
+
+    </style>
+
+    <!--Website tittle-->
+    <title>APEX GAMING |</title>
+
+</head>
+
+<body>
+
+    <!--Preloader-->
+    <div id="preloader">
+        <div id="container">
+            <div id="ring"></div>
+            <div id="ring"></div>
+            <div id="ring"></div>
+            <div id="ring"></div>
+            <div id="h3">S&A Legacy</div>
+        </div>
+    </div>
+    <!--Preloader End-->
+
+    <header>
+
+        <!--Top-most Header-->
+        <div class="container-fluid t-header">
+
+            <div class="row rows">
+
+                <div class="container col-12 col-md-4 col-sm-12">
+                    <div class="group">
+                        <button class="search__button">
+                            <svg class="search__icon" aria-hidden="true" viewBox="0 0 24 24">
+                                <g>
+                                    <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path>
+                                </g>
+                            </svg>
+                        </button>
+                        <input placeholder="Search" type="search" class="input" />
+                    </div>
+                </div>
+
+
+                <!--marquee tag-->
+                <div class="col-12 col-md-4 col-sm-12 tour">
+                    <span>
+                        <marquee scrollamount="10" direction="right">Welcome to Apex | The World for Gamers</marquee>
+                    </span>
+                </div>
+
+                <!--div tag for facebook, whatsapp, twitter, login/sighn-up-->
+                <div class="col-12 col-md-4 col-sm-12 icon">
+                    <ul>
+                        <!--facebook icon-->
+                        <li><a href="https:\\www.facebook.com" target="__blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+
+                        <!--whatsapp icon-->
+                        <li><a href="https:\\www.whatsapp.com" target="__blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+
+                        <!--Twitter icon-->
+                        <li><a href="https:\\www.twitter.com" target="__blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+
+                        <!--Login/Sighn-up-->
+                        <li><a href="login.html" target="__blank">Log in</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!--Navigation bar-->
+        <nav class="navbar navbar-expand-lg navigation">
+
+            <div class="container-fluid">
+
+                <!--Logo for Navbar-->
+                <a class="navbar-brand logo" href="#">
+                    <div class="logo">APEX</div>
+                </a>
+
+                <!--Menu button for phone view-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse nav__links" id="navbarSupportedContent">
+
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                        <!--Menu-->
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">Home<span></span></a>
+                        </li>
+
+                        <!--About-->
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="about.html">About<span></span></a>
+                        </li>
+
+                        <!--Contact-->
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="contact.html">Contact<span></span></a>
+                        </li>
+
+                        <!--Services-->
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="service.html">Services<span></span></a>
+                        </li>
+
+                        <!--Others button dropdown-->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Others<span></span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Oth 1</a></li>
+                                <li><a class="dropdown-item" href="#">Oth 2</a></li>
+                                <!--<li><hr class="dropdown-divider"></li>-->
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <!--Darkmode buttons-->
+                <!-- <div class="cta">
+                    <label for="theme" class="theme">
+                        <span class="theme__toggle-wrap">
+                            <input id="theme" class="theme__toggle" type="checkbox" role="switch" name="theme" value="dark">
+                            <span class="theme__fill"></span>
+                            <span class="theme__icon">
+                                <span class="theme__icon-part"></span>
+                                <span class="theme__icon-part"></span>
+                                <span class="theme__icon-part"></span>
+                                <span class="theme__icon-part"></span>
+                                <span class="theme__icon-part"></span>
+                                <span class="theme__icon-part"></span>
+                                <span class="theme__icon-part"></span>
+                                <span class="theme__icon-part"></span>
+                                <span class="theme__icon-part"></span>
+                            </span>
+                        </span>
+                    </label>
+                </div> -->
+
+                <!--Cart-->
+                <div class="cart-icon">
+                    <a class="cart-icons" href="cart.php">
+                        <i class="fa-solid fa-cart-arrow-down"></i>
+                        <p>Cart</p>
+
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="carousel">
+        <div class="list">
+            <div class="item">
+                <img src="lenevo2.png">
+                <div class="introduce">
+                    <div class="title">DESIGN SLIDER</div>
+                    <div class="topic">Aerphone</div>
+                    <div class="des">
+                        <!-- 20 lorem -->
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, laborum cumque dignissimos quidem atque et eligendi aperiam voluptates beatae maxime.
+                    </div>
+                    <button class="seeMore">SEE MORE &#8599</button>
+                </div>
+                <div class="detail">
+                    <div class="title">Aerphone GHTK</div>
+                    <div class="des">
+                        <!-- lorem 50 -->
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, reiciendis suscipit nobis nulla animi, modi explicabo quod corrupti impedit illo, accusantium in eaque nam quia adipisci aut distinctio porro eligendi. Reprehenderit nostrum consequuntur ea! Accusamus architecto dolores modi ducimus facilis quas voluptatibus! Tempora ratione accusantium magnam nulla tenetur autem beatae.
+                    </div>
+                    <div class="specifications">
+                        <div>
+                            <p>Used Time</p>
+                            <p>6 hours</p>
+                        </div>
+                        <div>
+                            <p>Charging port</p>
+                            <p>Type-C</p>
+                        </div>
+                        <div>
+                            <p>Compatible</p>
+                            <p>Android</p>
+                        </div>
+                        <div>
+                            <p>Bluetooth</p>
+                            <p>5.3</p>
+                        </div>
+                        <div>
+                            <p>Controlled</p>
+                            <p>Touch</p>
+                        </div>
+                    </div>
+                    <div class="checkout">
+                        <button>ADD TO CART</button>
+                        <button>CHECKOUT</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="img2.png">
+                <div class="introduce">
+                    <div class="title">DESIGN SLIDER</div>
+                    <div class="topic">Aerphone</div>
+                    <div class="des">
+                        <!-- 20 lorem -->
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, laborum cumque dignissimos quidem atque et eligendi aperiam voluptates beatae maxime.
+                    </div>
+                    <button class="seeMore">SEE MORE &#8599</button>
+                </div>
+                <div class="detail">
+                    <div class="title">Aerphone GHTK</div>
+                    <div class="des">
+                        <!-- lorem 50 -->
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, reiciendis suscipit nobis nulla animi, modi explicabo quod corrupti impedit illo, accusantium in eaque nam quia adipisci aut distinctio porro eligendi. Reprehenderit nostrum consequuntur ea! Accusamus architecto dolores modi ducimus facilis quas voluptatibus! Tempora ratione accusantium magnam nulla tenetur autem beatae.
+                    </div>
+                    <div class="specifications">
+                        <div>
+                            <p>Used Time</p>
+                            <p>6 hours</p>
+                        </div>
+                        <div>
+                            <p>Charging port</p>
+                            <p>Type-C</p>
+                        </div>
+                        <div>
+                            <p>Compatible</p>
+                            <p>Android</p>
+                        </div>
+                        <div>
+                            <p>Bluetooth</p>
+                            <p>5.3</p>
+                        </div>
+                        <div>
+                            <p>Controlled</p>
+                            <p>Touch</p>
+                        </div>
+                    </div>
+                    <div class="checkout">
+                        <button>ADD TO CART</button>
+                        <button>CHECKOUT</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="img3.png">
+                <div class="introduce">
+                    <div class="title">DESIGN SLIDER</div>
+                    <div class="topic">Aerphone</div>
+                    <div class="des">
+                        <!-- 20 lorem -->
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, laborum cumque dignissimos quidem atque et eligendi aperiam voluptates beatae maxime.
+                    </div>
+                    <button class="seeMore">SEE MORE &#8599</button>
+                </div>
+                <div class="detail">
+                    <div class="title">Aerphone GHTK</div>
+                    <div class="des">
+                        <!-- lorem 50 -->
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, reiciendis suscipit nobis nulla animi, modi explicabo quod corrupti impedit illo, accusantium in eaque nam quia adipisci aut distinctio porro eligendi. Reprehenderit nostrum consequuntur ea! Accusamus architecto dolores modi ducimus facilis quas voluptatibus! Tempora ratione accusantium magnam nulla tenetur autem beatae.
+                    </div>
+                    <div class="specifications">
+                        <div>
+                            <p>Used Time</p>
+                            <p>6 hours</p>
+                        </div>
+                        <div>
+                            <p>Charging port</p>
+                            <p>Type-C</p>
+                        </div>
+                        <div>
+                            <p>Compatible</p>
+                            <p>Android</p>
+                        </div>
+                        <div>
+                            <p>Bluetooth</p>
+                            <p>5.3</p>
+                        </div>
+                        <div>
+                            <p>Controlled</p>
+                            <p>Touch</p>
+                        </div>
+                    </div>
+                    <div class="checkout">
+                        <button>ADD TO CART</button>
+                        <button>CHECKOUT</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="img4.png">
+                <div class="introduce">
+                    <div class="title">DESIGN SLIDER</div>
+                    <div class="topic">Aerphone</div>
+                    <div class="des">
+                        <!-- 20 lorem -->
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, laborum cumque dignissimos quidem atque et eligendi aperiam voluptates beatae maxime.
+                    </div>
+                    <button class="seeMore">SEE MORE &#8599</button>
+                </div>
+                <div class="detail">
+                    <div class="title">Aerphone GHTK</div>
+                    <div class="des">
+                        <!-- lorem 50 -->
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, reiciendis suscipit nobis nulla animi, modi explicabo quod corrupti impedit illo, accusantium in eaque nam quia adipisci aut distinctio porro eligendi. Reprehenderit nostrum consequuntur ea! Accusamus architecto dolores modi ducimus facilis quas voluptatibus! Tempora ratione accusantium magnam nulla tenetur autem beatae.
+                    </div>
+                    <div class="specifications">
+                        <div>
+                            <p>Used Time</p>
+                            <p>6 hours</p>
+                        </div>
+                        <div>
+                            <p>Charging port</p>
+                            <p>Type-C</p>
+                        </div>
+                        <div>
+                            <p>Compatible</p>
+                            <p>Android</p>
+                        </div>
+                        <div>
+                            <p>Bluetooth</p>
+                            <p>5.3</p>
+                        </div>
+                        <div>
+                            <p>Controlled</p>
+                            <p>Touch</p>
+                        </div>
+                    </div>
+                    <div class="checkout">
+                        <button>ADD TO CART</button>
+                        <button>CHECKOUT</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="img5.png">
+                <div class="introduce">
+                    <div class="title">DESIGN SLIDER</div>
+                    <div class="topic">Aerphone</div>
+                    <div class="des">
+                        <!-- 20 lorem -->
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, laborum cumque dignissimos quidem atque et eligendi aperiam voluptates beatae maxime.
+                    </div>
+                    <button class="seeMore">SEE MORE &#8599</button>
+                </div>
+                <div class="detail">
+                    <div class="title">Aerphone GHTK</div>
+                    <div class="des">
+                        <!-- lorem 50 -->
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, reiciendis suscipit nobis nulla animi, modi explicabo quod corrupti impedit illo, accusantium in eaque nam quia adipisci aut distinctio porro eligendi. Reprehenderit nostrum consequuntur ea! Accusamus architecto dolores modi ducimus facilis quas voluptatibus! Tempora ratione accusantium magnam nulla tenetur autem beatae.
+                    </div>
+                    <div class="specifications">
+                        <div>
+                            <p>Used Time</p>
+                            <p>6 hours</p>
+                        </div>
+                        <div>
+                            <p>Charging port</p>
+                            <p>Type-C</p>
+                        </div>
+                        <div>
+                            <p>Compatible</p>
+                            <p>Android</p>
+                        </div>
+                        <div>
+                            <p>Bluetooth</p>
+                            <p>5.3</p>
+                        </div>
+                        <div>
+                            <p>Controlled</p>
+                            <p>Touch</p>
+                        </div>
+                    </div>
+                    <div class="checkout">
+                        <button>ADD TO CART</button>
+                        <button>CHECKOUT</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="img6.png">
+                <div class="introduce">
+                    <div class="title">DESIGN SLIDER</div>
+                    <div class="topic">Aerphone</div>
+                    <div class="des">
+                        <!-- 20 lorem -->
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, laborum cumque dignissimos quidem atque et eligendi aperiam voluptates beatae maxime.
+                    </div>
+                    <button class="seeMore">SEE MORE &#8599</button>
+                </div>
+                <div class="detail">
+                    <div class="title">Aerphone GHTK</div>
+                    <div class="des">
+                        <!-- lorem 50 -->
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, reiciendis suscipit nobis nulla animi, modi explicabo quod corrupti impedit illo, accusantium in eaque nam quia adipisci aut distinctio porro eligendi. Reprehenderit nostrum consequuntur ea! Accusamus architecto dolores modi ducimus facilis quas voluptatibus! Tempora ratione accusantium magnam nulla tenetur autem beatae.
+                    </div>
+                    <div class="specifications">
+                        <div>
+                            <p>Used Time</p>
+                            <p>6 hours</p>
+                        </div>
+                        <div>
+                            <p>Charging port</p>
+                            <p>Type-C</p>
+                        </div>
+                        <div>
+                            <p>Compatible</p>
+                            <p>Android</p>
+                        </div>
+                        <div>
+                            <p>Bluetooth</p>
+                            <p>5.3</p>
+                        </div>
+                        <div>
+                            <p>Controlled</p>
+                            <p>Touch</p>
+                        </div>
+                    </div>
+                    <div class="checkout">
+                        <button>ADD TO CART</button>
+                        <button>CHECKOUT</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="arrows">
+            <button id="prev"><</button>
+            <button id="next">></button>
+            <button id="back">See All &#8599</button>
+        </div>
+    </div>
+
+    <section id="feature" class="section-p1">
+        <div class="fe-box">
+            <img src="f1.png" alt="">
+            <h6>Free Shipping</h6>
+        </div>
+
+        <div class="fe-box">
+            <img src="f2.png" alt="">
+            <h6>Online Order</h6>
+        </div>
+
+        <div class="fe-box">
+            <img src="img/f3.png" alt="">
+            <h6>Save Money</h6>
+        </div>
+
+        <div class="fe-box">
+            <img src="f4.png" alt="">
+            <h6>Promotions</h6>
+        </div>
+
+        <div class="fe-box">
+            <img src="f5.png" alt="">
+            <h6>Happy Sell</h6>
+        </div>
+
+        <div class="fe-box">
+            <img src="f6.png" alt="">
+            <h6>24/7 Support</h6>
+        </div>
+    </section>
+
+    <h2 id="shop_category" class="section-p1">Shop By Category</h2>
+    <section id="category" class="section-p1">
+        <div class="sub-category">
+            <h4>Coolest</h4>
+            <h2 class="sc-1">LAPTOPS</h2>
+            <span>Gaming and Mid-range</span>
+            <a class="button-cat" href="about.php">Explore</a> 
+        </div>
+        <div class="sub-category2">
+            <h4>Coolest</h4>
+            <h2 class="sc-2">MONITORS</h2>
+            <span>Gaming and Mid-range</span>
+            <a class="button-cat" href="monitor.html">Explore</a>
+        </div>
+        <div class="sub-category3">
+            <h4>Coolest</h4>
+            <h2 class="sc-3">KEYBOARD & MOUSE</h2>
+            <span>Gaming and Mid-range</span>
+            <a class="button-cat" href="about.php">Explore</a>
+        </div>
+        <div class="sub-category4">
+            <h4>Coolest</h4>
+            <h2 class="sc-4">CPU & MOTHERBOARD</h2>
+            <span>Gaming and Mid-range</span>
+            <a class="button-cat" href="about.php">Explore</a>
+        </div>
+        <div class="sub-category5">
+            <h4>Coolest</h4>
+            <h2 class="sc-5">HEADSETS</h2>
+            <span>Gaming and Mid-range</span>
+            <a class="button-cat" href="about.php">Explore</a>
+        </div>
+        <div class="sub-category6">
+            <h4>Coolest</h4>
+            <h2 class="sc-6">TWS</h2>
+            <span>Gaming and Mid-range</span>
+            <a class="button-cat" href="about.php">Explore</a>
+        </div>
+    </section>
+
+    <section id="product1" class="section-p1">
+        <h2>Featured Products</h2>
+        <p>New Hot Collections for Gaming Laptops</p>
+        <div class="pro-container">
+            <div class="pro">
+                <img src="asus_2.jpg" alt="">
+                <div class="des">
+                    <span>ASUS</span>
+                    <h5>ASUS ROG Strix G15 15.6"</h5>
+                    <p>High Quality Gaming Laptops</p>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Rs-75,000</h4>
+                    <a href="#"><i class="fa-solid fa-cart-arrow-down cart"></i></a>
+                </div>
+            </div>
+
+            <div class="pro">
+                <img src="apple_macbook_air_m2-removebg-preview.png" alt="">
+                <div class="des">
+                    <span>ASUS</span>
+                    <h5>ASUS ROG Strix G15 15.6"</h5>
+                    <p>High Quality Gaming Laptops</p>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Rs-75,000</h4>
+                    <a href="#"><i class="fa-solid fa-cart-arrow-down cart"></i></a>
+                </div>
+            </div>
+
+            <div class="pro">
+                <img src="hp_pavillion_amd_ryzen5.jpg" alt="">
+                <div class="des">
+                    <span>ASUS</span>
+                    <h5>ASUS ROG Strix G15 15.6"</h5>
+                    <p>High Quality Gaming Laptops</p>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Rs-75,000</h4>
+                    <a href="#"><i class="fa-solid fa-cart-arrow-down cart"></i></a>
+                </div>
+            </div>
+
+            <div class="pro">
+                <img src="hp_intel_core_i5_11thGEN.jpg" alt="">
+                <div class="des">
+                    <span>ASUS</span>
+                    <h5>ASUS ROG Strix G15 15.6"</h5>
+                    <p>High Quality Gaming Laptops</p>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Rs-75,000</h4>
+                    <a href="#"><i class="fa-solid fa-cart-arrow-down cart"></i></a>
+                </div>
+            </div>
+
+            <div class="pro">
+                <img src="asus_intel_core_i5_13thgen.jpg" alt="">
+                <div class="des">
+                    <span>ASUS</span>
+                    <h5>ASUS ROG Strix G15 15.6"</h5>
+                    <p>High Quality Gaming Laptops</p>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Rs-75,000</h4>
+                    <a href="#"><i class="fa-solid fa-cart-arrow-down cart"></i></a>
+                </div>
+            </div>
+
+            <div class="pro">
+                <img src="dell_inspiron_intel_intel_core_i5_13thgen.jpg" alt="">
+                <div class="des">
+                    <span>ASUS</span>
+                    <h5>ASUS ROG Strix G15 15.6"</h5>
+                    <p>High Quality Gaming Laptops</p>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Rs-75,000</h4>
+                    <a href="#"><i class="fa-solid fa-cart-arrow-down cart"></i></a>
+                </div>
+            </div>
+
+            <div class="pro">
+                <img src="redmibook_pro_core_i5_11thgen.jpg" alt="">
+                <div class="des">
+                    <span>ASUS</span>
+                    <h5>ASUS ROG Strix G15 15.6"</h5>
+                    <p>High Quality Gaming Laptops</p>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Rs-75,000</h4>
+                    <a href="#"><i class="fa-solid fa-cart-arrow-down cart"></i></a>
+                </div>
+            </div>
+
+            <div class="pro">
+                <img src="asus_vivobook_15_intel_core_i5_12thgen.jpg" alt="">
+                <div class="des">
+                    <span>ASUS</span>
+                    <h5>ASUS ROG Strix G15 15.6"</h5>
+                    <p>High Quality Gaming Laptops</p>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Rs-75,000</h4>
+                    <a href="#"><i class="fa-solid fa-cart-arrow-down cart"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="banner" class="section-m1">
+        <h4>Accessories</h4>
+        <h2>Up to <span>30% Off</span> - All Computers Accessories</h2>
+        <button class="normal">Explore More</button>
+    </section>
+
+    <section id="product1" class="section-p1">
+        <h2>New Arrivals</h2>
+        <p>New Hot Collections for Gaming Laptops</p>
+        <div class="pro-container">
+            <div class="pro">
+                <img src="asus_2.jpg" alt="">
+                <div class="des">
+                    <span>ASUS</span>
+                    <h5>ASUS ROG Strix G15 15.6"</h5>
+                    <p>High Quality Gaming Laptops</p>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Rs-75,000</h4>
+                    <a href="#"><i class="fa-solid fa-cart-arrow-down cart"></i></a>
+                </div>
+            </div>
+
+            <div class="pro">
+                <img src="apple_macbook_air_m2-removebg-preview.png" alt="">
+                <div class="des">
+                    <span>ASUS</span>
+                    <h5>ASUS ROG Strix G15 15.6"</h5>
+                    <p>High Quality Gaming Laptops</p>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Rs-75,000</h4>
+                    <a href="#"><i class="fa-solid fa-cart-arrow-down cart"></i></a>
+                </div>
+            </div>
+
+            <div class="pro">
+                <img src="hp_pavillion_amd_ryzen5.jpg" alt="">
+                <div class="des">
+                    <span>ASUS</span>
+                    <h5>ASUS ROG Strix G15 15.6"</h5>
+                    <p>High Quality Gaming Laptops</p>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Rs-75,000</h4>
+                    <a href="#"><i class="fa-solid fa-cart-arrow-down cart"></i></a>
+                </div>
+            </div>
+
+            <div class="pro">
+                <img src="hp_intel_core_i5_11thGEN.jpg" alt="">
+                <div class="des">
+                    <span>ASUS</span>
+                    <h5>ASUS ROG Strix G15 15.6"</h5>
+                    <p>High Quality Gaming Laptops</p>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Rs-75,000</h4>
+                    <a href="#"><i class="fa-solid fa-cart-arrow-down cart"></i></a>
+                </div>
+            </div>
+
+            <div class="pro">
+                <img src="asus_intel_core_i5_13thgen.jpg" alt="">
+                <div class="des">
+                    <span>ASUS</span>
+                    <h5>ASUS ROG Strix G15 15.6"</h5>
+                    <p>High Quality Gaming Laptops</p>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Rs-75,000</h4>
+                    <a href="#"><i class="fa-solid fa-cart-arrow-down cart"></i></a>
+                </div>
+            </div>
+
+            <div class="pro">
+                <img src="dell_inspiron_intel_intel_core_i5_13thgen.jpg" alt="">
+                <div class="des">
+                    <span>ASUS</span>
+                    <h5>ASUS ROG Strix G15 15.6"</h5>
+                    <p>High Quality Gaming Laptops</p>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Rs-75,000</h4>
+                    <a href="#"><i class="fa-solid fa-cart-arrow-down cart"></i></a>
+                </div>
+            </div>
+
+            <div class="pro">
+                <img src="redmibook_pro_core_i5_11thgen.jpg" alt="">
+                <div class="des">
+                    <span>ASUS</span>
+                    <h5>ASUS ROG Strix G15 15.6"</h5>
+                    <p>High Quality Gaming Laptops</p>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Rs-75,000</h4>
+                    <a href="#"><i class="fa-solid fa-cart-arrow-down cart"></i></a>
+                </div>
+            </div>
+
+            <div class="pro">
+                <img src="asus_vivobook_15_intel_core_i5_12thgen.jpg" alt="">
+                <div class="des">
+                    <span>ASUS</span>
+                    <h5>ASUS ROG Strix G15 15.6"</h5>
+                    <p>High Quality Gaming Laptops</p>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Rs-75,000</h4>
+                    <a href="#"><i class="fa-solid fa-cart-arrow-down cart"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sm-banner">
+        <div class="sub-category7">
+            <h2>GPU</h2>
+            <h3>High-end GPU collection - 50% OFF</h3>
+        </div>
+        <div class="sub-category8">
+            <h2>CABINET</h2>
+            <h3>Best gaming Cabinet - 40% OFF</h3>
+        </div>
+        <div class="sub-category9">
+            <h2>POWER SUPPLY</h2>
+            <h3>Ultimate Power - 30% OFF</h3>
+        </div>
+    </section>
+
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Sign Up For Newsletters</h4>
+            <p>Get E-mail updates about our latest shop and <span>special offers.</span></p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Enter your E-mail">
+            <button class="normal">Subscribe</button>
+        </div>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <a class="navbar-brand logo logofooter" href="#">
+                <div class="logo logoapex">APEX</div>
+            </a>
+            <h4>Contact</h4>
+            <p><strong>Address: </strong>123, Gaming Avenue, Bangalore, Karnataka 500001, India</p>
+            <p><strong>Phone:</strong>(+91) 9330944071 / (+91) 9831306494</p>
+            <p><strong>Email:</strong> <a href="mailto:info@apex.com">info@apex.com</a></p>
+            <p><strong>Hours:</strong>10:00 - 9:00, Mon - Sat</p>
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="links">
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact Us</a>
+        </div>
+
+        <div class="col">
+            <h4>Product</h4>
+            <a href="#">Laptops</a>
+            <a href="#">Monitors</a>
+            <a href="#">Workstation</a>
+            <a href="#">Phone</a>
+            <a href="#">Accessories</a>
+        </div>
+
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign in</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="app.jpg" alt="">
+                <img src="play.jpg" alt="">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img src="pay.png" alt="">
+        </div>
+    </footer>
+
+    <div class="copyright">
+        &copy Copyright & All Rights Reserved 2024 | <a href="#">APEX</a>
+    </div>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+
+    <!--JS for acrive menu on click-->
+    <script>
+        const menuItems = document.querySelectorAll('.nav-link');
+        menuItems.forEach(item => {
+            item.addEventListener('click', () => {
+                // Remove active class from all menu items
+                menuItems.forEach(item => item.parentElement.classList.remove('active'));
+                // Add active class to clicked menu item
+                item.parentElement.classList.add('active');
+            });
+        });
+    </script>
+
+    <!--JS for Slider-->
+    <script>
+        let nextButton = document.getElementById('next');
+        let prevButton = document.getElementById('prev');
+        let carousel = document.querySelector('.carousel');
+        let listHTML = document.querySelector('.carousel .list');
+        let seeMoreButtons = document.querySelectorAll('.seeMore');
+        let backButton = document.getElementById('back');
+
+        nextButton.onclick = function() {
+            showSlider('next');
+        }
+        prevButton.onclick = function() {
+            showSlider('prev');
+        }
+        let unAcceppClick;
+        const showSlider = (type) => {
+            nextButton.style.pointerEvents = 'none';
+            prevButton.style.pointerEvents = 'none';
+
+            carousel.classList.remove('next', 'prev');
+            let items = document.querySelectorAll('.carousel .list .item');
+            if (type === 'next') {
+                listHTML.appendChild(items[0]);
+                carousel.classList.add('next');
+            } else {
+                listHTML.prepend(items[items.length - 1]);
+                carousel.classList.add('prev');
+            }
+            clearTimeout(unAcceppClick);
+            unAcceppClick = setTimeout(() => {
+                nextButton.style.pointerEvents = 'auto';
+                prevButton.style.pointerEvents = 'auto';
+            }, 2000)
+        }
+        seeMoreButtons.forEach((button) => {
+            button.onclick = function() {
+                carousel.classList.remove('next', 'prev');
+                carousel.classList.add('showDetail');
+            }
+        });
+        backButton.onclick = function() {
+            carousel.classList.remove('showDetail');
+        }
+    </script>
+
+    <!--Darkmode JS-->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeToggle = document.getElementById('theme');
+
+            // Function to toggle dark mode
+            function toggleDarkMode() {
+                document.body.classList.toggle('dark-mode');
+            }
+
+            // Listen for change event on the theme toggle
+            themeToggle.addEventListener('change', function() {
+                toggleDarkMode();
+            });
+        });
+    </script>
+
+    <!--preloader JS-->
+    <script>
+        var loader = document.getElementById("preloader");
+        window.addEventListener("load", function() {
+            loader.style.display = "none";
+        });
+    </script>
+</body>
+
+</html>
